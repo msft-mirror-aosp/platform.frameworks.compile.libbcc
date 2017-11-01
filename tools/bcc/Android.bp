@@ -27,16 +27,13 @@ cc_binary {
         "libLLVM",
     ],
 
+    header_libs: ["slang_headers"],
+
     target: {
-        host: {
-            host_ldlibs: ["-ldl"],
-        },
         android: {
             shared_libs: [
-                "libdl",
                 "liblog",
-                "libutils",
-                "libcutils",
+                "libvndksupport",
             ],
         },
     },

@@ -16,6 +16,7 @@
 
 cc_library_static {
     name: "libLLVMWrap",
+    vendor_available: true,
     host_supported: true,
 
     srcs: [
@@ -26,6 +27,8 @@ cc_library_static {
         "wrapper_output.cpp",
     ],
 
+    cflags: ["-Wall", "-Werror"],
+
     target: {
         host: {
             cflags: ["-D__HOST__"],
@@ -35,5 +38,5 @@ cc_library_static {
         },
     },
 
-    header_libs: ["libbcinfo-headers"],
+    header_libs: ["libbcinfo-headers", "liblog_headers"],
 }
