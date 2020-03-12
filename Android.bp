@@ -87,12 +87,6 @@ cc_defaults {
                 "-DDISABLE_CLCORE_NEON",
             ],
         },
-        mips: {
-            cflags: ["-DFORCE_MIPS_CODEGEN"],
-        },
-        mips64: {
-            cflags: ["-DFORCE_MIPS64_CODEGEN"],
-        },
     },
     target: {
         android_x86: {
