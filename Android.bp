@@ -69,6 +69,7 @@ cc_defaults {
             cflags: [
                 "-DFORCE_ARM_CODEGEN",
                 "-DARCH_ARM_HAVE_VFP",
+                "-DPROVIDE_ARM64_CODEGEN",
             ],
             neon: {
                 cflags: [
@@ -85,12 +86,6 @@ cc_defaults {
                 "-DARCH_ARM_HAVE_VFP_D32",
                 "-DDISABLE_CLCORE_NEON",
             ],
-        },
-        mips: {
-            cflags: ["-DFORCE_MIPS_CODEGEN"],
-        },
-        mips64: {
-            cflags: ["-DFORCE_MIPS64_CODEGEN"],
         },
     },
     target: {
