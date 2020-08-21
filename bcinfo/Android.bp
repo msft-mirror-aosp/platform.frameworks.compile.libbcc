@@ -81,12 +81,6 @@ cc_library_shared {
                 "libcutils",
                 "liblog",
             ],
-            product_variables: {
-                unbundled_build: {
-                    // don't build for unbundled branches
-                    enabled: false,
-                },
-            },
         },
         android: {
             shared_libs: [
