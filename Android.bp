@@ -101,15 +101,11 @@ cc_defaults {
         arm: {
             cflags: [
                 "-DFORCE_ARM_CODEGEN",
+                "-DARCH_ARM_HAVE_NEON",
                 "-DARCH_ARM_HAVE_VFP",
+                "-DARCH_ARM_HAVE_VFP_D32",
                 "-DPROVIDE_ARM64_CODEGEN",
             ],
-            neon: {
-                cflags: [
-                    "-DARCH_ARM_HAVE_VFP_D32",
-                    "-DARCH_ARM_HAVE_NEON",
-                ],
-            },
         },
         arm64: {
             cflags: [
