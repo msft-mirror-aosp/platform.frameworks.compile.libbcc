@@ -27,10 +27,7 @@ package {
 cc_library_shared {
     name: "libbcinfo",
     vendor_available: true,
-    vndk: {
-        enabled: true,
-        support_system_process: true,
-    },
+    double_loadable: true,
     host_supported: true,
     defaults: [
         "llvm-defaults",
