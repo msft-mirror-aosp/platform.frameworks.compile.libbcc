@@ -39,8 +39,6 @@ cc_library_static {
         "wrapper_output.cpp",
     ],
 
-    cflags: ["-Wall", "-Werror"],
-
     target: {
         host: {
             cflags: ["-D__HOST__"],
@@ -50,5 +48,8 @@ cc_library_static {
         },
     },
 
-    header_libs: ["libbcinfo-headers", "liblog_headers"],
+    header_libs: [
+        "libbcinfo-headers",
+        "liblog_headers",
+    ],
 }
