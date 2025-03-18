@@ -51,6 +51,9 @@ cc_library {
         "Source.cpp",
     ],
 
+    cflags: [
+        "-Wno-cast-function-type-mismatch",
+    ],
     shared_libs: ["libbcinfo"],
 
     header_libs: ["slang_headers"],
